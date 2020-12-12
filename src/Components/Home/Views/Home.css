@@ -1,0 +1,75 @@
+.home {
+    
+    display: flex;
+    overflow: hidden;
+    position: relative; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    padding: 10px;
+    
+}
+
+p {
+    font-weight: thin;
+    font-size: 40px;
+    margin: 5px 2px;
+}
+
+.Typewrite{
+    font-weight: 100;
+}
+
+.button-parent {
+    display: flex;
+    flex-direction: row;
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 18px;
+}
+
+.container{
+    width: 360px;
+    padding: 0;
+    height: 288px;
+}
+
+.container img{
+    width: 100%;
+    height: auto;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    display: inline;
+    float: left;
+    
+}
+
+.list-container{
+    width: 24px;
+    padding: 10px;
+    margin: 20px;
+    height: 24px;
+    border-style: solid;
+    border-radius: 60%;
+    border-width: 1px;
+}
+
+.list-container img{
+    width: 100%;
+    height: auto;
+}
