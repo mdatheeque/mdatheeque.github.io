@@ -1,35 +1,38 @@
 import React from 'react'
 import "./Home.css";
+import Button from "../../Buttons/Views/Button";
+import RoundButton from "../../Buttons/Views/RoundButton"
 
 export default function Home() {
     return (
         // Home  - Entire viewport
         <div className="home">
             
-            {/* Logo Container - Start */}
+            {/* Logo Container */}
             <div className="container">
-                <img src={"/MyBrandLogo.svg"} alt="Logo"/>
+                <img className="logo-animate" src={"/MyBrandLogo.svg"} alt="Logo"/>
             </div>
-            {/* Logo Container - End */}
 
-            {/*Animate Texts */}
-            <div className="Typewrite">
-                <p>Welcome !</p>
+
+            {/*Contents */}
+            <div className="Typewrite ">
+                <p>Muhammed Atheeque</p>
+                <p className="subtext">Designer | Developer</p>
+
             </div> 
+
+            {/*Portfolio Button*/}
             <div className="button-parent">
-                <div className="button-child ">
-                    <button  style={{width:"20vw"}}>Portfolio</button> 
-                </div>
+                <Button BName="Portfolio" BLink="/port"/>
             </div> 
 
             {/* Round Buttons */}
             <ul className="socialMedia-button-list">
-                <li className="list-container"><a href="www.instagram.com"><img src="./behance.svg" alt="behance" /></a></li>
-                <li className="list-container"><a href="www.instagram.com"><img src="./instagram.svg" alt="Instagram" /></a></li>
-                <li className="list-container"><a href="www.instagram.com"><img src="./linkedin.svg" alt="linkedin" /></a></li>
-                <li className="list-container"><a href="www.instagram.com"><img src="./dribble.svg" alt="dribble" /></a></li>
+                <RoundButton BLink="https://www.instagram.com/na_muhammedatheeque/" Balttext="Instagram" Bimglink="./instagram.svg" />
+                <RoundButton BLink="https://www.linkedin.com/in/muhammed-atheeque-a92b1398/" Balttext="Linkedin" Bimglink="./linkedin.svg" />
+                <RoundButton BLink="https://dribbble.com/mdnama" Balttext="Dribble" Bimglink="./dribble.svg" />
+                <RoundButton BLink="https://www.behance.net/mdatheeque" Balttext="Behnace" Bimglink="./behance.svg" />
             </ul>
-
         </div>
     )
 }

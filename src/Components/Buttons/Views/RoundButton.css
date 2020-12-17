@@ -1,0 +1,26 @@
+/*container styles*/
+
+.list-container{
+    width: 24px;
+    padding: 20px;
+    margin: 10px;
+    height: 24px;
+    border-radius: 60%;
+    background-color: none;
+    transition: background-color .5s, color .5s
+}
+
+/*to adjust image within container*/
+
+.list-container img{
+    width: 100%;
+    height: auto;
+}
+
+/*Animation and trnasition*/
+.list-container:hover {
+    --colorcode : #FF6C6C;
+    background-color: #E0E0E0;
+    border: hidden;
+
+}

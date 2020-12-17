@@ -1,12 +1,46 @@
-.NavBar{
-    display: grid;
-    grid-template-areas: "logo nav";
+/*Nav bar container*/
+
+.navbar-flex-container{
+    padding:30px 40px ;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
-.Nav{
-    grid-area: nav;
-    display: grid;
-    grid-template-columns: repeat(5,auto);
+.navbar-mobile-menu {
+    display: flex;
+    margin-left: auto;
+    flex-direction: row;
     align-items: center;
-    justify-items: center;
+    visibility: hidden;
+    width: 40px;
+    height: 40px;
+    padding:0px;
+}
+
+.navbar-mobile-menu img{
+    width: 100%;
+    height: auto;
+}
+
+/*Nav bar when minizmed or in phone*/
+
+@media only screen and  (max-width: 768px) {
+    .navbar-flex-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 50vh;
+        background-color: #e0e0e0;
+    }
+
+    .navbar-mobile-menu {
+        visibility: visible;
+    }
+
+    .navbar-flex-item {
+        margin: 10px;
+    }
 }

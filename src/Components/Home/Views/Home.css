@@ -1,3 +1,7 @@
+*{
+    margin: 0;
+    padding: 0;
+}
 
 /*Home Viewport*/
 .home {
@@ -9,31 +13,39 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100vh;
-    padding: 10px;
-    
+    height: 100vh;    
 }
+
+/*Contents */
 
 p {
     font-weight: thin;
     font-size: 40px;
-    margin: 5px 2px;
 }
 
 .Typewrite{
     font-weight: 100;
+    padding-bottom: 10px;
+    text-align: center;
 }
 
+.subtext {
+    font-size: 25px;
+    font-weight: 100;
+    text-align: center;
+}
+
+/*for normal button*/
 .button-parent {
     display: flex;
     flex-direction: row;
+    padding: 10px;
+    margin-top: 30px;
+    margin-bottom: 15px;
 }
 
-button {
-    margin: 10px;
-    padding: 10px 20px;
-    font-size: 18px;
-}
+
+/*for Logo*/
 
 .container{
     width: 360px;
@@ -51,7 +63,7 @@ ul {
     justify-content: center;
     align-items: center;
     list-style-type: none;
-    margin: 0;
+    margin-bottom: 40px;
     padding: 0;
 }
 
@@ -61,17 +73,19 @@ li {
     
 }
 
-.list-container{
-    width: 24px;
-    padding: 10px;
-    margin: 20px;
-    height: 24px;
-    border-style: solid;
-    border-radius: 60%;
-    border-width: 1px;
+/*Logo Animate - Dim and bright - Start
+/* .logo-animate {
+    box-shadow: 0px 0px 40px #f0f0f0;
+    transition: ease-in-out 2s;
+    animation: logoglow 4s ease-in 1s infinite normal;
 }
 
-.list-container img{
-    width: 100%;
-    height: auto;
-}
+@keyframes logoglow {
+    0% { box-shadow: 0px 0px 40px cyan; };
+    25% { box-shadow: 0px 0px 80px cyan; };
+    50% {box-shadow: 0px 0px 120px cyan;}
+    75% {box-shadow: 0px 0px 80px cyan;}
+    100% {box-shadow: 0px 0px 40px cyan;}
+
+} */
+/*Logo Animate - Dim and bright - End */

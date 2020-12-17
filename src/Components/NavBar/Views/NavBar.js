@@ -1,17 +1,29 @@
 import React from 'react'
 import "../../NavBar/Views/NavBar.css"
+import Button from "../../Buttons/Views/Button"
 
 export default function NavBar() {
     return (
-        <header className="NavBar" >
-            <img src="" alt="Logo" className="Logo" />
-            <nav className="Nav">
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#skiils">Skills</a>
-                <a href="#works">Works</a>
-                <a href="#contact">Contact</a>
-            </nav>
-        </header>
-    )
+        <React.Fragment>            
+      {/*Flex Container for Nav*/} 
+      <header className="navbar-flex-container">
+        {/*Extra div to give margin when minimized*/} 
+        <div className="navbar-flex-item">
+          <Button BName="Home" BLink="#home" Btype="navbutton" />
+        </div>
+        <div className="navbar-flex-item">
+          <Button BName="About" BLink="#home" Btype="navbutton" />
+        </div>
+        <div className="navbar-flex-item">
+          <Button BName="Skill" BLink="#home" Btype="navbutton" />
+        </div>
+        <div className="navbar-flex-item">
+          <Button BName="Works" BLink="#home" Btype="navbutton" />
+        </div>
+        <div className="navbar-flex-item">
+          <Button BName="Contact" BLink="#home" Btype="navbutton" />
+        </div>
+      </header>
+      </React.Fragment>
+    );
 }
