@@ -1,22 +1,16 @@
 /*Nav bar container*/
 
 .navbar-flex-container{
-    padding:30px 40px ;
+    padding:15px 15px ;
+    margin: 15px 15px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 }
 
-.navbar-mobile-menu {
-    display: flex;
-    margin-left: auto;
-    flex-direction: row;
-    align-items: center;
-    visibility: hidden;
-    width: 40px;
-    height: 40px;
-    padding:0px;
+input#menu {
+    display: none;
 }
 
 .navbar-mobile-menu img{
@@ -30,15 +24,112 @@
     .navbar-flex-container {
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 50vh;
+        margin: 0;
+        visibility: visible;
+        justify-content: space-between;
+        align-content:flex-end;
+        align-items: flex-end;
+        padding:0;
+        /* height: 80vh; */
         background-color: #e0e0e0;
     }
 
-    .navbar-mobile-menu {
-        visibility: visible;
+    /*Mobile view hide and appear screen and menu icon animation - Start*/
+
+    input#menu {
+        display: none;
     }
+
+    /*Created the div box*/
+    .icon {
+        background-color: white;
+        margin-left: auto;
+        cursor: pointer;
+        display: block;
+        height: 24px;
+        padding: 16px;
+        width: 24px;
+        transition: background-color .5s ease;
+    }
+
+    /*Div box hover effect*/
+    .icon:hover {
+        background-color: #e0e0e0;
+    }
+
+
+    /*Ceates three lines (Burger Menu)*/
+    .icon .menu,
+    .icon .menu::before,
+    .icon .menu::after {
+        background: #9FB1BD;
+        content: '';
+        display: flex;
+        justify-content: flex-end;
+        height: 2px;
+        position: absolute;
+        transition: background ease .3s, top ease .3s .3s, transform ease .3s;
+        width: 20px;
+    }
+
+
+    /*Burger Menu hover effect*/
+    .icon:hover .menu,
+    .icon:hover .menu::before,
+    .icon:hover .menu::after {
+        background: black;
+    }
+
+    /*Align all three burger lines inside the div box*/
+    .icon .menu {
+        right: 18px;
+        top: 27px;
+    }
+
+    /*make the ::before line to go up*/
+    .icon .menu::before {
+        top: -6px;
+    }
+    
+    /*make the ::after line to go down*/
+    .icon .menu::after {
+        top: 6px;
+    }
+
+    /*Once checked the middle line turns transparent*/
+    #menu:checked + .icon .menu {
+        background: transparent;
+    }
+
+    /*once checked the ::before and ::after lines rotates 45deg*/
+    #menu:checked + .icon .menu::before {
+        transform: rotate(45deg);
+    }
+    
+    #menu:checked + .icon .menu::after {
+        transform: rotate(-45deg);
+    }
+
+    #menu:checked + .icon .menu::before,
+    #menu:checked + .icon .menu::after {
+    top: 0;
+    transition: top ease .3s, transform ease .3s .3s;
+    }
+
+    /*Hide the nav buttons*/
+    nav {
+        height: 0px;
+        transition: height ease .6s;
+        
+        overflow: hidden;
+    }
+
+    /*Once checked the nav drops down*/
+    #menu:checked ~ nav {
+        height: 60vh;
+    }
+
+    /*Mobile view hide and appear screen and menu icon animation - End*/
 
     .navbar-flex-item {
         margin: 10px;
